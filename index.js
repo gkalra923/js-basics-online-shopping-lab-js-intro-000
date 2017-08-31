@@ -15,11 +15,23 @@ function addToCart(item) {
  cart.push({[item] : price});
  console.log(item + " has been added to your cart.");
  return cart;
-
 }
 
 function viewCart() {
   // write your code here
+  if(cart.length === 0 ) {
+    console.log("Your shopping cart is empty.");
+  }
+  else {
+    var itemAndPrices = [];
+    for(var i = 0 ; i < cart.length ; i ++ ){
+      var itemAndPrice = cart[i];
+      var item = Object.keys(itemAndPrice)[0]
+      var price = itemAndPrice[item]
+      itemAndPrices.push(item + " at $" + price)
+    }
+    console.log("In your cart, you have: " + itemAndPrices.join(", ") + ".");
+  }
 }
 
 function total() {

@@ -51,7 +51,7 @@ function viewCart() {
 function total() {
   var sum = 0;
   for (var i = 0 ; i < cart.length; i ++) {
-    for( item in cart[i]) {
+    for(var item in cart[i]) {
       sum += cart[i][item]
     }
   }

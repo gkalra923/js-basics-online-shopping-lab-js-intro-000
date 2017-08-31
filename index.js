@@ -49,7 +49,7 @@ function viewCart() {
 }
 
 function total() {
-  sum = 0;
+  var sum = 0;
   for (var i = 0 ; i < cart.length; i ++) {
     for( item in cart[i]) {
       sum += cart[i][item]
